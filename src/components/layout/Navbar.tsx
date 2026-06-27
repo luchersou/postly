@@ -2,14 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { NavbarDesktop } from "./navbar/NavbarDesktop";
-import { NavbarMobile } from "./navbar/NavbarMobile";
-
-const Logo = () => (
-  <a href="/" className="flex items-center gap-2">
-    <span className="text-lg font-semibold tracking-tight">Postly</span>
-  </a>
-);
+import { NavbarDesktop } from "./navbar/navbar-desktop";
+import { NavbarMobile } from "./navbar/navbar-mobile";
+import { Logo } from "@/components/shared/logo";
 
 export function Navbar() {
   const [mounted, setMounted] = useState(false);
