@@ -26,7 +26,7 @@ export function Hero() {
 					The smarter way to schedule,
 					<br />
 					publish and{" "}
-					<span className="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-2 before:bg-indigo-500">
+					<span className="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-2 before:bg-brand">
 						<span className="relative text-white">grow faster.</span>
 					</span>
 				</h1>
