@@ -136,7 +136,7 @@ export function FeatureSection() {
         </motion.div>
 
         {/* Features */}
-        <div className="mt-20 flex flex-col gap-24 lg:gap-32">
+        <div className="mt-20 flex flex-col gap-24 lg:gap-2">
           {FEATURES.map((feature) => (
             <FeatureItem key={feature.tag} feature={feature} />
           ))}
