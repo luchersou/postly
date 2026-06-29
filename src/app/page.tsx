@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/navbar";
 import { FeatureSection } from "@/components/sections/feature-section";
 import { Hero } from "@/components/sections/hero";
+import StatsSection from "@/components/sections/stats-section";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         {/* sections here */}
         <Hero />
         <FeatureSection />
+        <StatsSection />
       </main>
     </>
   );
