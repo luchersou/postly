@@ -49,27 +49,26 @@ export function Hero() {
 			</div>
 
       {/* Images */}
-      <div className="relative">
-        <Image
-          src="/hero-bg.png"
-          alt="Hero background"
-          width={1280}
-          height={420}
-          className="w-full rounded-xl"
-          priority
-        />
-				<div className="absolute inset-0 flex items-start justify-center pt-10">
-          <Image
-            src="/dashboard-preview.png"
-            alt="Postly dashboard"
-            width={1000}
-            height={720}
-            className="w-[60%] h-[600px] rounded-xl"
-          />
-        </div>
-        {/* Fade bottom */}
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background to-transparent" />
-      </div>
+      <div className="relative mt-3">
+				<Image
+					src="/hero-bg.png"
+					alt="Hero background"
+					width={1280}
+					height={420}
+					className="w-full object-cover"
+					priority
+				/>
+				<div className="absolute inset-0 flex items-start justify-center pt-[3%]">
+					<Image
+						src="/dashboard-preview.png"
+						alt="Postly dashboard"
+						width={1000}
+						height={720}
+						className="w-[60%] h-auto rounded-xl"
+					/>
+				</div>
+				<div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background to-transparent" />
+			</div>
     </section>
   );
 }
