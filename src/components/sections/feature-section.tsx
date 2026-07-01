@@ -125,7 +125,7 @@ export function FeatureSection() {
         >
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Everything you need to{" "}
-            <span className="bg-gradient-to-r from-brand via-indigo-500 to-blue-400 bg-clip-text text-transparent">
+            <span className="text-gradient">
               grow on social media
             </span>
           </h2>

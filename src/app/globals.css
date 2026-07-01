@@ -132,3 +132,9 @@
     @apply font-sans;
   }
 }
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand via-indigo-500 to-blue-400 bg-clip-text text-transparent;
+  }
+}

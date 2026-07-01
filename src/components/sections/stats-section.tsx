@@ -56,7 +56,7 @@ function StatItem({ stat }: { stat: (typeof stats)[number] }) {
   );
 }
 
-export default function StatsSection() {
+export function StatsSection() {
   return (
     <section className="py-8 sm:py-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
