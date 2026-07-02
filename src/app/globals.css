@@ -139,3 +139,15 @@
     @apply bg-gradient-to-r from-brand via-indigo-500 to-blue-400 bg-clip-text text-transparent;
   }
 }
+
+@keyframes autoplay-progress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.embla__progress__bar {
+  animation-name: autoplay-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  width: 0%;
+}
