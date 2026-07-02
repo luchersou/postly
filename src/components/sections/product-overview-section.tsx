@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { BarChart3, Users, TrendingUp, BarChart2, Layers, CalendarClock } from "lucide-react";
+import { BarChart2, Layers, CalendarClock } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -11,7 +11,6 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
 import { useAutoplayProgress } from "@/hooks/use-autoplay-progress";
 
 type FeatureItem = {
@@ -42,9 +41,9 @@ const features: FeatureItem[] = [
 ];
 
 const images = [
-  "integration-library.svg",
-  "integration-library.svg",
-  "integration-library.svg",
+	"/product-calendar.jpg",
+	"/product-multiplatform.jpg",
+  "/product-analytics.jpg",
 ];
 
 export function ProductOverview() {
