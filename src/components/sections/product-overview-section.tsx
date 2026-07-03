@@ -1,180 +1,193 @@
-"use client";
-
-import React, { useEffect, useRef, useState } from "react";
-import { BarChart2, Layers, CalendarClock } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  type CarouselApi,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { useAutoplayProgress } from "@/hooks/use-autoplay-progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent } from "@/components/ui/card";
 
-type FeatureItem = {
-  icon: React.ElementType;
-  title: string;
-  description: string;
+const tabContent = {
+  "ai-scheduling": {
+    description:
+      "Let Postly's AI analyze your audience behavior and automatically schedule posts at the exact times that drive the most engagement — across every platform, with zero manual effort.",
+    image: "/product-calendar.jpg",
+    features: [
+      {
+        title: "Peak Time Detection",
+        description:
+          "Automatically identify when your audience is most active and ready to engage.",
+      },
+      {
+        title: "Queue Management",
+        description:
+          "Build and manage your content queue with drag-and-drop simplicity.",
+      },
+      {
+        title: "Recurring Posts",
+        description:
+          "Schedule evergreen content to repeat automatically on a custom cadence.",
+      },
+      {
+        title: "Calendar Overview",
+        description:
+          "Visualize your entire publishing schedule across all platforms in one view.",
+      },
+    ],
+  },
+  "multi-platform": {
+    description:
+      "Manage Instagram, TikTok, X, LinkedIn and more from a single unified dashboard. Create once, adapt for each platform, and publish everywhere without switching between apps.",
+    image: "/product-multiplatform.jpg",
+    features: [
+      {
+        title: "Platform Adaption",
+        description:
+          "Automatically adjust captions, hashtags and formats for each social network.",
+      },
+      {
+        title: "Unified Inbox",
+        description:
+          "Manage comments and messages from all platforms in one place.",
+      },
+      {
+        title: "Cross-Platform Preview",
+        description:
+          "See exactly how your post will look on each platform before publishing.",
+      },
+      {
+        title: "One-Click Publishing",
+        description:
+          "Publish to all connected accounts simultaneously with a single click.",
+      },
+    ],
+  },
+  "analytics": {
+    description:
+      "Track reach, engagement and follower growth across all your channels in one clean dashboard. Understand what content drives results and double down on what works.",
+    image: "/product-analytics.jpg",
+    features: [
+      {
+        title: "Engagement Metrics",
+        description:
+          "Monitor likes, comments, shares and saves across every post and platform.",
+      },
+      {
+        title: "Follower Growth",
+        description:
+          "Track audience growth over time and identify what drives new followers.",
+      },
+      {
+        title: "Best Content Reports",
+        description:
+          "Automatically surface your top-performing posts and replicate their success.",
+      },
+      {
+        title: "Custom Date Ranges",
+        description:
+          "Analyze performance over any time period with flexible reporting filters.",
+      },
+    ],
+  },
+  "ai-content": {
+    description:
+      "Generate platform-optimized captions, hashtags and post variations from a single idea in seconds. Postly's AI writes in your brand voice so you never start from a blank page again.",
+    image: "/product-ai-content.jpg",
+    features: [
+      {
+        title: "Caption Generation",
+        description:
+          "Turn a brief idea into a polished, platform-ready caption instantly.",
+      },
+      {
+        title: "Hashtag Suggestions",
+        description:
+          "Get data-driven hashtag recommendations tailored to your niche and audience.",
+      },
+      {
+        title: "Brand Voice Training",
+        description:
+          "Teach Postly your tone and style so every caption sounds like you.",
+      },
+      {
+        title: "Post Variations",
+        description:
+          "Generate multiple versions of the same post to A/B test what resonates.",
+      },
+    ],
+  },
 };
 
-const features: FeatureItem[] = [
-  {
-    icon: CalendarClock,
-    title: "AI-Powered Scheduling",
-    description:
-      "Let Postly analyze your audience and automatically schedule posts at the times that drive the most engagement.",
-  },
-  {
-    icon: Layers,
-    title: "Multi-Platform Publishing",
-    description:
-      "Publish to Instagram, TikTok, X, LinkedIn and more from a single dashboard — no more switching between apps.",
-  },
-  {
-    icon: BarChart2,
-    title: "Performance Analytics",
-    description:
-      "Track reach, engagement and follower growth across all your channels and replicate what drives results.",
-  },
-];
-
-const images = [
-	"/product-calendar.jpg",
-	"/product-multiplatform.jpg",
-  "/product-analytics.jpg",
+const tabs = [
+  { value: "ai-scheduling", label: "AI Scheduling" },
+  { value: "multi-platform", label: "Multi-Platform" },
+  { value: "analytics", label: "Analytics" },
+  { value: "ai-content", label: "AI Content" },
 ];
 
 export function ProductOverview() {
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-  const progressNodes = useRef<(HTMLDivElement | null)[]>([]);
-  const autoplay = React.useRef(Autoplay({ delay: 8000 }));
-
-  // Initialize progress nodes array
-  useEffect(() => {
-    progressNodes.current = progressNodes.current.slice(0, features.length);
-  }, []);
-
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCurrent(api.selectedScrollSnap());
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-  }, [api]);
-
-  // Use autoplay progress for each pagination card
-  const { showAutoplayProgress, resetProgress, restartProgress } =
-    useAutoplayProgress(api, progressNodes, current);
-
-  const scrollTo = (index: number) => {
-    if (!api) return;
-
-    // Reset progress bar before scrolling
-    resetProgress();
-
-    // Scroll to the selected index
-    api.scrollTo(index);
-
-    // Restart progress after a short delay to ensure the slide has changed
-    setTimeout(() => {
-      const autoplay = api.plugins()?.autoplay;
-      if (autoplay) {
-        // Reset autoplay timer
-        autoplay.reset();
-        const timeUntilNext = autoplay.timeUntilNext();
-        if (timeUntilNext !== null && timeUntilNext > 0) {
-          restartProgress(timeUntilNext, index);
-        }
-      }
-    }, 100);
-  };
-
   return (
-    <section className="py-12 sm:py-16 lg:py-20">
+    <section className="py-14 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 space-y-2">
-					<h3 className="text-3xl leading-tight font-bold md:text-4xl">
-						Your social media,{" "}
-						<span className="text-gradient">finally under control</span>
-					</h3>
-				</div>
+        <div className="mx-auto max-w-3xl space-y-4 text-center">
+          <h2 className="text-3xl font-bold leading-tight lg:text-4xl">
+            Your social media,{" "}
+            <span className="text-gradient">finally under control</span>
+          </h2>
+          <p className="text-lg/relaxed text-muted-foreground">
+            From AI-powered scheduling to deep analytics — everything you need
+            to grow your audience is built into Postly.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-          <div className="relative lg:col-span-2">
-            <Carousel
-              setApi={setApi}
-              plugins={[autoplay.current]}
-              className="w-full"
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-            >
-              <CarouselContent>
-                {images.map((image, index) => (
-                  <CarouselItem key={index} className="basis-full p-0">
-                    <div className="bg-muted relative aspect-video w-full overflow-hidden">
-                      <Image
-                        src={image}
-                        alt={`Project dashboard ${index + 1}`}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
-          </div>
-
-          {/* Right Panel - Features List */}
-          <div className="flex flex-col divide-y lg:col-span-1">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              const isActive = current === index;
-
-              return (
-                <React.Fragment key={index}>
-                  <div
-                    className="relative cursor-pointer p-4 py-6"
-                    onClick={() => scrollTo(index)}
+        <div className="mt-8 lg:mt-12">
+          <Tabs defaultValue="ai-scheduling" className="w-full">
+            <div className="flex justify-center">
+              <TabsList className="inline-flex h-auto w-full flex-col md:h-12 md:flex-row">
+                {tabs.map((tab) => (
+                  <TabsTrigger
+                    key={tab.value}
+                    className="w-full md:w-auto"
+                    value={tab.value}
                   >
-                    <div className="relative z-10 flex items-start gap-4">
-                      <div className="mt-1 flex size-10 shrink-0 items-center justify-center rounded-full border">
-                        <Icon className="size-4" />
-                      </div>
-                      <div className="flex-1 space-y-1.5">
-                        <h4 className="text-foreground text-lg font-medium">
-                          {feature.title}
-                        </h4>
-                        <p className="text-muted-foreground text-sm/relaxed">
-                          {feature.description}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 w-full overflow-hidden">
-                      <div
-                        ref={(el) => {
-                          progressNodes.current[index] = el;
-                        }}
-                        className={cn(
-                          "embla__progress__bar bg-muted z-0 h-full",
-                          !(isActive && showAutoplayProgress) && "opacity-0",
-                        )}
-                      />
+                    {tab.label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
+
+            {Object.entries(tabContent).map(([key, content]) => (
+              <TabsContent key={key} value={key} className="mt-8">
+                <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+                  <div className="relative aspect-4/3 w-full overflow-hidden rounded-xl border shadow-md">
+                    <Image
+                      src={content.image}
+                      alt="Postly dashboard"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+
+                  <div className="space-y-6 lg:space-y-10">
+                    <p className="leading-relaxed text-muted-foreground">
+                      {content.description}
+                    </p>
+
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      {content.features.map((feature) => (
+                        <Card
+                          key={feature.title}
+                          className="border-0 bg-muted/50 shadow-none"
+                        >
+                          <CardContent>
+                            <h5 className="mb-2 font-medium">{feature.title}</h5>
+                            <p className="text-sm leading-relaxed text-muted-foreground">
+                              {feature.description}
+                            </p>
+                          </CardContent>
+                        </Card>
+                      ))}
                     </div>
                   </div>
-                </React.Fragment>
-              );
-            })}
-          </div>
+                </div>
+              </TabsContent>
+            ))}
+          </Tabs>
         </div>
       </div>
     </section>
