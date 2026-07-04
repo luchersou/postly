@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
-const integrations = [
+const features = [
   {
     image: "/integration-scheduling.svg",
     title: "Smart Scheduling",
@@ -37,11 +37,11 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
-function IntegrationCard({
+function FeaturesBentoCard({
   item,
   index,
 }: {
-  item: (typeof integrations)[0];
+  item: (typeof features)[0];
   index: number;
 }) {
   const ref = useRef(null);
@@ -78,7 +78,7 @@ function IntegrationCard({
   );
 }
 
-export function IntegrationsGrid() {
+export function FeaturesBentoSection() {
   const headerRef = useRef(null);
   const headerInView = useInView(headerRef, { once: true, margin: "-80px" });
 
@@ -106,15 +106,15 @@ export function IntegrationsGrid() {
 
         {/* Row 1 — 2 cards */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          {integrations.slice(0, 2).map((item, i) => (
-            <IntegrationCard key={item.title} item={item} index={i} />
+          {features.slice(0, 2).map((item, i) => (
+            <FeaturesBentoCard key={item.title} item={item} index={i} />
           ))}
         </div>
 
         {/* Row 2 — 3 cards */}
         <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
-          {integrations.slice(2).map((item, i) => (
-            <IntegrationCard key={item.title} item={item} index={i + 2} />
+          {features.slice(2).map((item, i) => (
+            <FeaturesBentoCard key={item.title} item={item} index={i + 2} />
           ))}
         </div>
 
