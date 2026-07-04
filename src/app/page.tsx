@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/layout/navbar";
 import { CTASection } from "@/components/sections/CTA-section";
-import { FeatureSection } from "@/components/sections/feature-section";
+import { FeaturesSection } from "@/components/sections/features/features-section";
 import { Footer } from "@/components/sections/footer-section";
 import { Hero } from "@/components/sections/hero";
 import { IntegrationsGrid } from "@/components/sections/integration-section";
@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <FeatureSection />
+        <FeaturesSection />
         <StatsSection />
         <IntegrationsGrid />
         <ProductOverview />

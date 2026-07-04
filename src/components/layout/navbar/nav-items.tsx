@@ -5,7 +5,6 @@ import {
   CalendarClock,
   BarChart2,
   Layers,
-  MessageSquare,
 } from "lucide-react";
 
 interface SubItem {
