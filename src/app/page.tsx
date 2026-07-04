@@ -18,7 +18,6 @@ export default function Home() {
         <FeaturesSection />
         <StatsSection />
         <IntegrationsGrid />
-        <ProductOverview />
         <TestimonialsSection />
         <PricingSection />
         <CTASection />
