@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/navbar";
 import { FeatureSection } from "@/components/sections/feature-section";
+import { Footer } from "@/components/sections/footer-section";
 import { Hero } from "@/components/sections/hero";
 import { IntegrationsGrid } from "@/components/sections/integration-section";
 import { PricingSection } from "@/components/sections/pricing/pricing-section";
@@ -19,6 +20,7 @@ export default function Home() {
         <ProductOverview />
         <TestimonialsSection />
         <PricingSection />
+        <Footer />
       </main>
     </>
   );
