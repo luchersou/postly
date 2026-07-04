@@ -1,9 +1,10 @@
+import { InstagramIcon } from "@/components/shared/icons/instagram-icon";
+import { LinkedinIcon } from "@/components/shared/icons/linkedin-icon";
+import { XIcon } from "@/components/shared/icons/x-icon";
 import {
   CalendarClock,
   BarChart2,
   Layers,
-  Globe,
-  Share2,
   MessageSquare,
 } from "lucide-react";
 
@@ -53,19 +54,19 @@ export const NAV_ITEMS: NavItem[] = [
         title: "Instagram",
         description: "Schedule posts, reels and stories automatically",
         href: "#",
-        icon: <Globe className="size-4" />,
+        icon: <InstagramIcon />,
       },
       {
         title: "Twitter / X",
         description: "Post threads and single tweets at the right time",
         href: "#",
-        icon: <Share2 className="size-4" />,
+        icon: <XIcon />,
       },
       {
         title: "LinkedIn",
         description: "Reach your professional network with scheduled content",
         href: "#",
-        icon: <MessageSquare className="size-4" />,
+        icon: <LinkedinIcon />,
       },
     ],
   },
