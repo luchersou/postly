@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/layout/navbar";
+import { Navbar } from "@/components/layout/navbar/navbar";
 import { CTASection } from "@/components/sections/CTA-section";
 import { FeaturesSection } from "@/components/sections/features/features-section";
 import { Footer } from "@/components/sections/footer-section";
