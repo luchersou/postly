@@ -7,6 +7,7 @@ import { FeaturesBentoSection } from "@/components/sections/feature-bento-sectio
 import { PricingSection } from "@/components/sections/pricing/pricing-section";
 import { StatsSection } from "@/components/sections/stats-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { FeaturesBento } from "@/components/sections/features-bento/features-bento-section";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         <Hero />
         <FeaturesSection />
         <StatsSection />
-        <FeaturesBentoSection />
+        <FeaturesBento />
         <TestimonialsSection />
         <PricingSection />
         <CTASection />
