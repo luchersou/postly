@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Globe, Link as LinkIcon, Code } from "lucide-react";
+import { LinkedinIcon } from "@/components/shared/icons/linkedin-icon";
+import { TiktokIcon } from "@/components/shared/icons/tiktok-icon";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
+import { XIcon } from "@/components/shared/icons/x-icon";
 
 // SVG viewBox: 700x400. All HTML elements use % of container (x/700, y/400).
 const PATH_LEFT  = "M 350 245 L 350 180 Q 350 160 330 160 L 140 160 Q 120 160 120 140 L 120 105";
@@ -35,9 +37,9 @@ export function RepurposingIllustration() {
         </svg>
 
         {/* Top buttons — left/top as % of 700x400 */}
-        <TopButton icon={<Globe    size={16} className="text-violet-500 shrink-0" />} text="Portal"     style={{ left: "5.71%",  top: "11.25%" }} />
-        <TopButton icon={<LinkIcon size={16} className="text-violet-500 shrink-0" />} text="Magic Link" style={{ left: "38.57%", top: "11.25%" }} />
-        <TopButton icon={<Code    size={16} className="text-violet-500 shrink-0" />} text="Embed"      style={{ left: "71.43%", top: "11.25%" }} />
+        <TopButton icon={<XIcon    size={16} className="text-violet-500 shrink-0" />} text="X"     style={{ left: "5.71%",  top: "11.25%" }} />
+        <TopButton icon={<TiktokIcon size={16} className="text-violet-500 shrink-0" />} text="TikTok" style={{ left: "38.57%", top: "11.25%" }} />
+        <TopButton icon={<LinkedinIcon size={16} className="text-violet-500 shrink-0" />} text="LinkedIn"      style={{ left: "71.43%", top: "11.25%" }} />
 
         {/* Center button */}
         <div
@@ -46,7 +48,7 @@ export function RepurposingIllustration() {
         >
           <PulseRings />
           <Button className="relative h-full w-full rounded-xl bg-violet-500 text-base font-semibold text-white shadow-[0_4px_0_#5b21b6] hover:bg-violet-600 active:translate-y-1 active:shadow-none">
-            One Click Access
+            Repurpose Now
           </Button>
         </div>
       </div>
