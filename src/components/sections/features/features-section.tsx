@@ -29,11 +29,19 @@ export function FeaturesSection() {
   );
 
   useEffect(() => {
-    mobileTagRefs.current[activeIndex]?.scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-      block: "nearest",
-    });
+    const tag = mobileTagRefs.current[activeIndex];
+    if (tag) {
+      const container = tag.closest(".overflow-x-auto");
+      if (container) {
+        const tagLeft = tag.offsetLeft;
+        const tagWidth = tag.offsetWidth;
+        const containerWidth = container.clientWidth;
+        container.scrollTo({
+          left: tagLeft - containerWidth / 2 + tagWidth / 2,
+          behavior: "smooth",
+        });
+      }
+    }
   }, [activeIndex]);
 
   const scrollToFeature = (index: number) => {
