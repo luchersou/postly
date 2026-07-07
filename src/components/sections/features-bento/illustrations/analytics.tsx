@@ -124,7 +124,7 @@ export function AnalyticsIllustration() {
     >
       <div className="mb-4">
         <h2 className="text-muted-foreground mb-1 text-xs">
-          Credit Score Growth
+          Monthly Reach
         </h2>
         <div className="flex items-center">
           <span className="text-4xl font-bold">{score}</span>
