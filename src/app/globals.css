@@ -137,6 +137,10 @@
   .text-gradient {
     @apply bg-gradient-to-r from-brand via-indigo-500 to-blue-400 bg-clip-text text-transparent;
   }
+
+  .btn-brand {
+    @apply bg-gradient-to-r from-brand to-indigo-400 text-white shadow-lg shadow-brand/25 transition-all duration-300 hover:shadow-brand/40 hover:scale-[1.02] hover:brightness-110;
+  }
 }
 
 @keyframes autoplay-progress {

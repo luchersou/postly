@@ -86,7 +86,7 @@ export function Hero() {
         </motion.p>
 
         <motion.div variants={itemVariants} className="mt-6 flex items-center justify-center gap-3">
-          <Button size="lg" asChild>
+          <Button className="btn-brand" size="lg" asChild>
             <Link href="#">Get started for free</Link>
           </Button>
           <Button size="lg" variant="secondary" asChild>

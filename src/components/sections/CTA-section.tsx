@@ -14,7 +14,7 @@ export function CTASection() {
 					Join 180k+ creators and teams already using Postly to schedule, publish and grow.
 				</p>
         <div className="flex justify-center gap-3">
-          <Button size="lg" asChild>
+          <Button className="btn-brand" size="lg" asChild>
             <Link href="#">Get Started</Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
