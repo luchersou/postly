@@ -102,7 +102,7 @@ export function MultiplatformIllustration() {
       </svg>
 
       <div className="absolute top-[50%] left-[50%] z-20 flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full border px-8 py-3">
-        <span className="text-muted-foreground text-sm">Integrations</span>
+        <span className="text-muted-foreground text-sm">Multi-Platform</span>
       </div>
 
       <Node x={(150 / 800) * 100} y={(80 / 400) * 100}>
