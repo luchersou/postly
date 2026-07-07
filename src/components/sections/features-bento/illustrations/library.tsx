@@ -2,45 +2,45 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { UserCheck, Landmark, ShieldCheck, Coins } from "lucide-react";
+import { Hash, Video, FileText, ImageIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const CARDS = [
   {
     id: 1,
-    title: "KYC Submitted",
-    desc: "Steven Kirk, London, UK",
-    status: "Completed",
+    title: "Summer Campaign",
+    desc: "Instagram · 4 assets",
+    status: "Ready",
     color: "text-green-600",
     bg: "bg-green-50",
-    icon: <UserCheck size={20} />,
+    icon: <ImageIcon size={20} />,
   },
   {
     id: 2,
-    title: "USD Deposit (ACH)",
-    desc: "$500,000 from J. Kirk",
-    status: "Credited",
+    title: "Brand Guidelines",
+    desc: "PDF · Updated today",
+    status: "Saved",
     color: "text-green-600",
     bg: "bg-green-50",
-    icon: <Landmark size={20} />,
+    icon: <FileText size={20} />,
   },
   {
     id: 3,
-    title: "+$500 PYUSD",
-    desc: "from U80a...7D0a",
-    status: "Confirming",
+    title: "Reel Template",
+    desc: "TikTok · 15s format",
+    status: "Draft",
     color: "text-gray-500",
     bg: "bg-gray-100",
-    icon: <ShieldCheck size={20} />,
+    icon: <Video size={20} />,
   },
   {
     id: 4,
-    title: "1,000,000 USDC",
-    desc: "to External Wallet",
-    status: "Pending",
+    title: "Hashtag Bank",
+    desc: "142 tags · 6 niches",
+    status: "Active",
     color: "text-blue-600",
     bg: "bg-blue-50",
-    icon: <Coins size={20} />,
+    icon: <Hash size={20} />,
   },
 ];
 
