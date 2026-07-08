@@ -134,7 +134,7 @@ export function Hero() {
               rotateY: tilt.y,
               transformStyle: "preserve-3d",
             }}
-            className="w-[60%] transition-transform duration-200 ease-out will-change-transform"
+            className="w-[80%] transition-transform duration-200 ease-out will-change-transform"
           >
             <Image
               src="/dashboard-preview.png"

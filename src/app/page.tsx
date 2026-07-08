@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/layout/navbar/navbar";
 import { CTASection } from "@/components/sections/CTA-section";
 import { FeaturesSection } from "@/components/sections/features/features-section";
-import { Footer } from "@/components/sections/footer-section";
+import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
 import { FeaturesBento } from "@/components/sections/features-bento/features-bento-section";
 import { PricingSection } from "@/components/sections/pricing/pricing-section";
