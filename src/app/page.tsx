@@ -7,6 +7,7 @@ import { FeaturesBento } from "@/components/sections/features-bento/features-ben
 import { PricingSection } from "@/components/sections/pricing/pricing-section";
 import { StatsSection } from "@/components/sections/stats-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { LogoCloud } from "@/components/sections/logo-cloud";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <LogoCloud />
         <FeaturesSection />
         <StatsSection />
         <FeaturesBento />
