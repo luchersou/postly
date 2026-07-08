@@ -85,10 +85,16 @@ export function TestimonialsSection() {
   return (
     <section className="py-16">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="text-center text-3xl md:text-4xl font-bold leading-tight">
-					Loved by creators and{" "}
-					<span className="text-gradient">teams worldwide</span>
-				</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 34 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+          className="text-center text-3xl md:text-4xl font-bold leading-tight"
+        >
+          Loved by creators and{" "}
+          <span className="text-gradient">teams worldwide</span>
+        </motion.h2>
 
         <div
           ref={containerRef}
