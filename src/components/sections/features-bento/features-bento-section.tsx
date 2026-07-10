@@ -17,11 +17,12 @@ export function FeaturesBento() {
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
           className="mx-auto mb-12 max-w-2xl text-center"
         >
-          <h2 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
-            Built for how you{" "}
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+            Built for how you
+            <br />
             <span className="text-gradient">actually work</span>
           </h2>
-          <p className="mt-4 text-zinc-400">
+          <p className="mt-4 text-muted-foreground">
             Everything you need to plan, create and grow — in one connected workspace.
           </p>
         </motion.div>
