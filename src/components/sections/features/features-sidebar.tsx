@@ -1,9 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { FEATURES } from "./data";
-import { tagVariants } from "./animations";
 import { cn } from "@/lib/utils";
+
+const tagVariants: Variants = {
+  inactive: { opacity: 0.4 },
+  active: { opacity: 1, transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } },
+};
 
 interface FeaturesSidebarProps {
   activeIndex: number;
