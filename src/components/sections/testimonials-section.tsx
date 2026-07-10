@@ -85,16 +85,22 @@ export function TestimonialsSection() {
   return (
     <section className="py-16">
       <div className="mx-auto max-w-6xl px-4">
-        <motion.h2
-          initial={{ opacity: 0, y: 34 }}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-center text-3xl md:text-4xl font-bold leading-tight"
+          className="mb-14 max-w-xl"
         >
-          Loved by creators and{" "}
-          <span className="text-gradient">teams worldwide</span>
-        </motion.h2>
+          <h2 className="text-4xl font-bold leading-tight sm:text-5xl">
+            Loved by creators
+            <br />
+            and teams worldwide
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Join 180k+ creators already using Postly to grow their audience.
+          </p>
+        </motion.div>
 
         <div
           ref={containerRef}
