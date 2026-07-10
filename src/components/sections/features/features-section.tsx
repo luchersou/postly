@@ -123,7 +123,7 @@ export function FeaturesSection() {
               ref={(el) => {
                 mobileItemRefs.current[index] = el;
               }}
-              className="flex flex-col gap-6 py-12"
+              className="flex flex-col gap-2 py-2"
             >
               <div className="relative h-56 overflow-hidden">
                 <Image
