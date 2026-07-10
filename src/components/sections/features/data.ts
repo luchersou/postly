@@ -22,7 +22,7 @@ export const FEATURES: FeatureItem[] = [
       "Visual calendar overview",
     ],
     cta: "AI Scheduling",
-    image: "/feature-1.svg",
+    image: "/feature/feature-scheduling.svg",
   },
   {
     index: 2,
@@ -37,7 +37,7 @@ export const FEATURES: FeatureItem[] = [
       "A/B post variations",
     ],
     cta: "AI Assistant",
-    image: "/feature-2.svg",
+    image: "/feature/feature-ai-assistant.svg",
   },
   {
     index: 3,
@@ -52,7 +52,7 @@ export const FEATURES: FeatureItem[] = [
       "Custom date range filters",
     ],
     cta: "Analytics",
-    image: "/feature-3.svg",
+    image: "/feature/feature-analytics.svg",
   },
   {
     index: 4,
@@ -67,7 +67,7 @@ export const FEATURES: FeatureItem[] = [
       "Workflow templates",
     ],
     cta: "Automation",
-    image: "/feature-1.svg",
+    image: "/feature/feature-automation.svg",
   },
   {
     index: 5,
@@ -82,6 +82,6 @@ export const FEATURES: FeatureItem[] = [
       "Team collaboration & approvals",
     ],
     cta: "Publishing",
-    image: "/feature-2.svg",
+    image: "/feature/feature-publishing.svg",
   },
 ];

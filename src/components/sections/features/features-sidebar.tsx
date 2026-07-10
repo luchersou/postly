@@ -30,7 +30,7 @@ export function FeaturesSidebar({ activeIndex, onSelect }: FeaturesSidebarProps)
                 : "text-muted-foreground"
             )}
           >
-            0{feature.index}
+            {feature.index}
           </span>
           <span
             className={cn(

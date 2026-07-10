@@ -125,7 +125,7 @@ export function FeaturesSection() {
               }}
               className="flex flex-col gap-6 py-12"
             >
-              <div className="relative h-56 overflow-hidden rounded-2xl border bg-muted/30">
+              <div className="relative h-56 overflow-hidden">
                 <Image
                   src={feature.image}
                   alt={feature.title}
