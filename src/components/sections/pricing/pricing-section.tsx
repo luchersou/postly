@@ -27,13 +27,14 @@ export function PricingSection() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-          className="mb-10 space-y-4 text-center"
+          className="mb-10 text-center"
         >
-          <h2 className="text-3xl font-bold leading-tight lg:text-4xl">
-            Simple, transparent{" "}
+          <h2 className="text-4xl font-bold leading-tight sm:text-5xl">
+            Simple, transparent
+            <br />
             <span className="text-gradient">pricing</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="mt-4 text-muted-foreground text-lg">
             Start for free. Upgrade when you're ready.
           </p>
         </motion.div>
