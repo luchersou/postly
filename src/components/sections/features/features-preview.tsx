@@ -14,7 +14,7 @@ export function FeaturesPreview({ activeIndex }: FeaturesPreviewProps) {
         src={FEATURES[activeIndex].image}
         alt={FEATURES[activeIndex].title}
         fill
-        className="object-contain p-8"
+        className="object-contain p-2"
       />
     </div>
   );
