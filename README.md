@@ -2,8 +2,6 @@
 
 A modern, production-ready landing page built for a fictional AI social media scheduling SaaS.
 
-![Postly Hero](/public/dashboard-preview.png)
-
 ## Overview
 
 Postly is a concept SaaS product that helps creators and teams grow on social media through AI-powered scheduling, multi-platform publishing, and deep analytics. 
