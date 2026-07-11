@@ -106,7 +106,7 @@ export function Hero() {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
           <Image
-            src="/hero-bg.png"
+            src="/hero-aurora.png"
             alt="Hero background"
             width={1280}
             height={420}
