@@ -7,8 +7,8 @@ import {
   FaFacebook,
   FaPinterest,
   FaThreads,
+  FaXTwitter
 } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
 
 const platforms = [
   { icon: FaInstagram, name: "Instagram" },
