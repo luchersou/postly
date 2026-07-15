@@ -1,10 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { ArrowRightIcon, PlayCircleIcon } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { ArrowRightIcon, PlayCircleIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useRef, useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";

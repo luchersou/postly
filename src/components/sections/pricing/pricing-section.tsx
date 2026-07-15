@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import { Check } from "lucide-react";
 import { motion } from "framer-motion";
+import { Check } from "lucide-react";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
 import { plans } from "./data";
 
 const fadeUp = {

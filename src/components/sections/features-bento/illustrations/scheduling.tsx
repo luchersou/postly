@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { AnimatePresence,motion } from "motion/react";
 import { useTheme } from "next-themes";
+import { useEffect, useRef,useState } from "react";
 
 type ColorScheme = {
   bg: string;

@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { motion } from "motion/react";
 import { Quote } from "lucide-react";
+import { motion } from "motion/react";
+import { useRef, useState } from "react";
 
 const testimonials = [
   {

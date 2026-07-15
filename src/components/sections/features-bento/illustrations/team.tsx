@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
 import { Logo } from "@/components/shared/logo";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export function TeamIllustration() {
   const avatars = [

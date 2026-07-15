@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useTheme } from "next-themes";
+
 import { LinkedinIcon } from "@/components/shared/icons/linkedin-icon";
 import { TiktokIcon } from "@/components/shared/icons/tiktok-icon";
-import { Button } from "@/components/ui/button";
-import { useTheme } from "next-themes";
 import { XIcon } from "@/components/shared/icons/x-icon";
+import { Button } from "@/components/ui/button";
 
 // SVG viewBox: 700x400. All HTML elements use % of container (x/700, y/400).
 const PATH_LEFT  = "M 350 245 L 350 180 Q 350 160 330 160 L 140 160 Q 120 160 120 140 L 120 105";

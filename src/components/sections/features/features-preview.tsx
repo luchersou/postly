@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+
 import { FEATURES } from "./data";
 
 interface FeaturesPreviewProps {

@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, animate, useMotionValue, useTransform } from "motion/react";
+import { animate, motion, useMotionValue, useTransform } from "motion/react";
+import { useEffect,useState } from "react";
+
 import { Badge } from "@/components/ui/badge";
 
 interface Point {

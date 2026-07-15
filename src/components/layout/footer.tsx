@@ -1,9 +1,9 @@
-import { Logo } from "@/components/shared/logo";
-import { TiktokIcon } from "@/components/shared/icons/tiktok-icon";
-import { YoutubeIcon } from "@/components/shared/icons/youtube-icon";
-import { LinkedinIcon } from "@/components/shared/icons/linkedin-icon";
 import { InstagramIcon } from "@/components/shared/icons/instagram-icon";
+import { LinkedinIcon } from "@/components/shared/icons/linkedin-icon";
+import { TiktokIcon } from "@/components/shared/icons/tiktok-icon";
 import { XIcon } from "@/components/shared/icons/x-icon";
+import { YoutubeIcon } from "@/components/shared/icons/youtube-icon";
+import { Logo } from "@/components/shared/logo";
 
 export function Footer() {
   return (

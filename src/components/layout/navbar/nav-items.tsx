@@ -1,11 +1,12 @@
+import {
+  BarChart2,
+  CalendarClock,
+  Layers,
+} from "lucide-react";
+
 import { InstagramIcon } from "@/components/shared/icons/instagram-icon";
 import { LinkedinIcon } from "@/components/shared/icons/linkedin-icon";
 import { XIcon } from "@/components/shared/icons/x-icon";
-import {
-  CalendarClock,
-  BarChart2,
-  Layers,
-} from "lucide-react";
 
 interface SubItem {
   title: string;

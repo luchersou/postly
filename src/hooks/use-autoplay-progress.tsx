@@ -1,6 +1,7 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import {  type CarouselApi } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { useCallback, useEffect, useRef, useState } from "react";
+
+import {  type CarouselApi } from "@/components/ui/carousel";
 
 const PROGRESS_ANIMATION_NAME = "autoplay-progress";
 

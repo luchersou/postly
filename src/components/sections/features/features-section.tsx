@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import Image from "next/image";
 import { Check } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 import { FEATURES } from "./data";
-import { FeaturesSidebar } from "./features-sidebar";
 import { FeaturesContent } from "./features-content";
 import { FeaturesPreview } from "./features-preview";
+import { FeaturesSidebar } from "./features-sidebar";
 import { useFeaturesScroll } from "./hooks/use-features-scroll";
 
 export function FeaturesSection() {

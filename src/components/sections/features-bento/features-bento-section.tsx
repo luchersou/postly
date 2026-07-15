@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+
 import { BENTO_FEATURES } from "./data";
 import { FeaturesBentoCard } from "./features-bento-card";
 

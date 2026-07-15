@@ -1,14 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+
 import { cn } from "@/lib/utils";
+
 import { BentoFeature } from "./data";
-import { SchedulingIllustration } from "./illustrations/scheduling";
 import { AnalyticsIllustration } from "./illustrations/analytics";
-import { MultiplatformIllustration } from "./illustrations/multiplatform";
-import { TeamIllustration } from "./illustrations/team";
 import { LibraryIllustration } from "./illustrations/library";
+import { MultiplatformIllustration } from "./illustrations/multiplatform";
 import { RepurposingIllustration } from "./illustrations/repurposing";
+import { SchedulingIllustration } from "./illustrations/scheduling";
+import { TeamIllustration } from "./illustrations/team";
 
 const illustrations = {
   scheduling: SchedulingIllustration,

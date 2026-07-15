@@ -1,8 +1,10 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { FEATURES } from "./data";
+
 import { cn } from "@/lib/utils";
+
+import { FEATURES } from "./data";
 
 const tagVariants: Variants = {
   inactive: { opacity: 0.4 },

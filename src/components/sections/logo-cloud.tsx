@@ -1,14 +1,14 @@
-import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import {
-  FaInstagram,
-  FaTiktok,
-  FaLinkedin,
-  FaYoutube,
   FaFacebook,
+  FaInstagram,
+  FaLinkedin,
   FaPinterest,
   FaThreads,
-  FaXTwitter
-} from "react-icons/fa6";
+  FaTiktok,
+  FaXTwitter,
+  FaYoutube} from "react-icons/fa6";
+
+import { InfiniteSlider } from "@/components/ui/infinite-slider";
 
 const platforms = [
   { icon: FaInstagram, name: "Instagram" },

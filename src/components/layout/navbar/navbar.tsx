@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
+import { Logo } from "@/components/shared/logo";
 import { cn } from "@/lib/utils";
+
 import { NavbarDesktop } from "./navbar-desktop";
 import { NavbarMobile } from "./navbar-mobile";
-import { Logo } from "@/components/shared/logo";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);

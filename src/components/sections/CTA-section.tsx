@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowRightIcon } from "lucide-react";
 import { motion } from "framer-motion";
+import { ArrowRightIcon } from "lucide-react";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 

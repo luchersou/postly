@@ -1,8 +1,10 @@
 "use client";
 
-import { RefObject } from "react";
 import { Check } from "lucide-react";
+import { RefObject } from "react";
+
 import { Button } from "@/components/ui/button";
+
 import { FEATURES } from "./data";
 
 interface FeaturesContentProps {

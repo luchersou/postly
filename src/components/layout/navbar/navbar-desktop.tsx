@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -6,7 +7,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Button } from "@/components/ui/button";
+
 import { NAV_ITEMS } from "./nav-items";
 
 export function NavbarDesktop({ logo }: { logo: React.ReactNode }) {

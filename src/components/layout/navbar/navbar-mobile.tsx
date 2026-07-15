@@ -1,10 +1,12 @@
 "use client";
 
+import { ChevronDown,Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
-import { NAV_ITEMS } from "./nav-items";
 import { cn } from "@/lib/utils";
+
+import { NAV_ITEMS } from "./nav-items";
 
 export function NavbarMobile({ logo }: { logo: React.ReactNode }) {
   const [open, setOpen] = useState(false);
